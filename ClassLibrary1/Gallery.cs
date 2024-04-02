@@ -8,14 +8,10 @@ namespace Core
 {
     public class Gallery
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        private List<Car> Cars { get; set; }
+        private List<Car> Cars;
 
-        public Gallery(int id, string name)
+        public Gallery()
         {
-            Id = id;
-            Name = name;
             Cars = new List<Car>();
         }
 
@@ -23,6 +19,7 @@ namespace Core
         {
             Cars.Add(car);
         }
+
         public void ShowAllCars()
         {
             foreach (var car in Cars)
